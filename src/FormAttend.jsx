@@ -1,4 +1,4 @@
-function App() {
+function FormAttend() {
   return (
     <div className="App">
       <section className="wpo-contact-section section-padding" id="RSVP">
@@ -113,4 +113,4 @@ function App() {
   )
 }
 
-export default App
+export default FormAttend

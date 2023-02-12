@@ -1,10 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
+import Countdown from './Countdown'
+import FormAttend from './FormAttend'
 import './index.css'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById('form-attend')).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <FormAttend />
+  </React.StrictMode>
+)
+
+ReactDOM.createRoot(document.getElementById('countdown')).render(
+  <React.StrictMode>
+    <Countdown />
+  </React.StrictMode>
 )
