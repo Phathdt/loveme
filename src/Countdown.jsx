@@ -1,7 +1,9 @@
 import { useCountdown } from './hooks/countdown'
 
 function Countdown() {
-  const [days, hours, minutes, seconds] = useCountdown('2023-03-12')
+  const [days, hours, minutes, seconds] = useCountdown(
+    'Sun Mar 12 2023 18:00:00 GMT+0700'
+  )
 
   return (
     <div className="App">
