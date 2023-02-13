@@ -1,4 +1,14 @@
+import axios from 'axios'
+import { useForm } from 'react-hook-form'
+import { env } from '@/config'
+
 function FormAttend() {
+  const { register, handleSubmit } = useForm()
+
+  const onSubmit = (data) => {
+    axios.post(`https://loveme-backend.vercel.app/api/records`, data)
+  }
+
   return (
     <div className="App">
       <section className="wpo-contact-section section-padding" id="RSVP">
@@ -9,15 +19,15 @@ function FormAttend() {
                 <div className="section-title-simg">
                   <img src="assets/images/section-title2.png" alt />
                 </div>
-                <h2>WILL YOU ATTEND?</h2>
+                <h2 style={{ fontFamily: 'Muli' }}>Bạn sẽ đến chứ?</h2>
                 <div className="section-title-img">
                   <div className="round-ball" />
                 </div>
               </div>
               <form
-                method="post"
                 className="contact-validation-active"
                 id="contact-form-main"
+                onSubmit={handleSubmit(onSubmit)}
               >
                 <div>
                   <input
@@ -25,67 +35,58 @@ function FormAttend() {
                     className="form-control"
                     name="name"
                     id="name"
-                    placeholder="Name"
+                    placeholder="Tên của bạn"
+                    required
+                    {...register('name', { required: true })}
                   />
                 </div>
                 <div>
-                  <input
-                    type="email"
+                  <select
+                    name="service"
                     className="form-control"
-                    name="email"
-                    id="email"
-                    placeholder="Email"
+                    {...register('attend_type', { required: true })}
+                  >
+                    <option disabled="disabled">Bạn sẽ tham dự chứ?</option>
+                    <option>Có</option>
+                    <option>Tất nhiên rồi</option>
+                  </select>
+                </div>
+                <div>
+                  <select
+                    name="guest"
+                    className="form-control"
+                    required
+                    {...register('guest', { required: true })}
+                  >
+                    <option disabled="disabled">Bạn sẽ đi chung với ai</option>
+                    <option>Đi 1 mình</option>
+                    <option>Đi 2 mình</option>
+                    <option>Nhiều lắm :D </option>
+                  </select>
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="special_request"
+                    id="special_request"
+                    placeholder="Bạn có yêu cầu đặc biệt gì không?"
+                    {...register('special_request')}
                   />
                 </div>
                 <div>
                   <input
                     type="text"
                     className="form-control"
-                    name="adress"
-                    id="adress"
-                    placeholder="Adress"
+                    name="your_wish"
+                    id="your_wish"
+                    placeholder="Lời chúc của bạn"
+                    {...register('your_wish', { required: true })}
                   />
-                </div>
-                <div>
-                  <select name="service" className="form-control">
-                    <option disabled="disabled" selected>
-                      Services
-                    </option>
-                    <option>Photography</option>
-                    <option>The Rehearsal Dinner</option>
-                    <option>The Afterparty</option>
-                    <option>Videographers</option>
-                    <option>Perfect Cake</option>
-                    <option>All Of The Above</option>
-                  </select>
-                </div>
-                <div>
-                  <select name="guest" className="form-control">
-                    <option disabled="disabled" selected>
-                      Number Of Guests
-                    </option>
-                    <option>01</option>
-                    <option>02</option>
-                    <option>03</option>
-                    <option>04</option>
-                    <option>05</option>
-                  </select>
-                </div>
-                <div>
-                  <select name="meal" className="form-control last">
-                    <option disabled="disabled" selected>
-                      Meal Preferences
-                    </option>
-                    <option>Chicken Soup</option>
-                    <option>Motton Kabab</option>
-                    <option>Chicken BBQ</option>
-                    <option>Mix Salad</option>
-                    <option>Beef Ribs</option>
-                  </select>
                 </div>
                 <div className="submit-area">
                   <button type="submit" className="theme-btn-s3">
-                    Send An Inquiry
+                    Phản hồi
                   </button>
                   <div id="c-loader">
                     <i className="ti-reload" />
@@ -93,9 +94,6 @@ function FormAttend() {
                 </div>
                 <div className="clearfix error-handling-messages">
                   <div id="success">Thank you</div>
-                  <div id="error">
-                    Error occurred while sending email. Please try again later.
-                  </div>
                 </div>
               </form>
               <div className="border-style" />
