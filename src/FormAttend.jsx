@@ -1,16 +1,40 @@
 import axios from 'axios'
 import { useForm } from 'react-hook-form'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 function FormAttend() {
   const { register, handleSubmit } = useForm()
 
-  const onSubmit = (data) => {
-    // axios.post(`http://localhost:3000/api/records`, data)
-    axios.post(`https://loveme-backend.vercel.app/api/records`, data)
+  const onSubmit = async (data) => {
+    await axios.post(`https://loveme-backend.vercel.app/api/records`, data)
+
+    toast.success('Cảm ơn bạn đã tham gia', {
+      position: 'top-center',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      progress: undefined,
+      theme: 'colored',
+    })
   }
 
   return (
     <div className="App">
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable={false}
+        pauseOnHover
+        theme="colored"
+      />
       <section className="wpo-contact-section section-padding" id="RSVP">
         <div className="container">
           <div className="wpo-contact-section-wrapper">
