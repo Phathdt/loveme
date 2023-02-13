@@ -1,11 +1,11 @@
 import axios from 'axios'
 import { useForm } from 'react-hook-form'
-import { env } from '@/config'
 
 function FormAttend() {
   const { register, handleSubmit } = useForm()
 
   const onSubmit = (data) => {
+    // axios.post(`http://localhost:3000/api/records`, data)
     axios.post(`https://loveme-backend.vercel.app/api/records`, data)
   }
 
