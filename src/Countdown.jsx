@@ -1,4 +1,8 @@
+import { useCountdown } from './hooks/countdown'
+
 function Countdown() {
+  const [days, hours, minutes, seconds] = useCountdown('2023-03-12')
+
   return (
     <div className="App">
       <section class="wpo-wedding-date section-padding">
@@ -9,31 +13,25 @@ function Countdown() {
                 <div id="clock">
                   <div class="box">
                     <div>
-                      <div class="time">00</div>
-                      <span>Month</span>
-                    </div>
-                  </div>
-                  <div class="box">
-                    <div>
-                      <div class="time">30</div>
+                      <div class="time">{days}</div>
                       <span>Days</span>
                     </div>
                   </div>
                   <div class="box">
                     <div>
-                      <div class="time">00</div>
+                      <div class="time">{hours}</div>
                       <span>Hours</span>
                     </div>
                   </div>
                   <div class="box">
                     <div>
-                      <div class="time">00</div>
+                      <div class="time">{minutes}</div>
                       <span>Mins</span>
                     </div>
                   </div>
                   <div class="box">
                     <div>
-                      <div class="time">00</div>
+                      <div class="time">{seconds}</div>
                       <span>Secs</span>
                     </div>
                   </div>

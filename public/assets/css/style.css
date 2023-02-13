@@ -42,7 +42,7 @@ Version:        1.0.0
    5.6 wpo-blog-section-s2
    5.7 wpo-partners-section-s2
 
- 6. Home-style-3 
+ 6. Home-style-3
   6.1 wpo-wedding-date
 	6.2 couple-section
 	6.3 wpo-video-section-s2
@@ -4153,11 +4153,7 @@ img {
     height: 120px;
   }
 }
-@media (max-width: 767px) {
-  .wpo-hero-style-3 .wpo-wedding-date #clock > div:last-child {
-    right: 0;
-  }
-}
+
 @media (max-width: 1399px) {
   .wpo-hero-style-3 .wpo-wedding-date #clock div + div {
     margin-left: 10px;
@@ -5947,7 +5943,7 @@ static-hero-s4
 }
 
 /*======================================
- 5. Home-style-2 
+ 5. Home-style-2
  =======================================*/
 /* 5.1 wpo-about-section */
 .wpo-about-section .wpo-about-wrap,
@@ -6245,7 +6241,7 @@ static-hero-s4
 }
 
 /*======================================
- 6. Home-style-3 
+ 6. Home-style-3
  =======================================*/
 /*--------------------------------------------------------------
 6.1 wpo-wedding-date
@@ -6285,10 +6281,6 @@ static-hero-s4
     margin: 10px;
     padding-bottom: 15px;
     height: 110px;
-  }
-  .wpo-wedding-date #clock > div:last-child {
-    position: relative;
-    right: -70px;
   }
 }
 .wpo-wedding-date #clock > div > div {
@@ -7016,7 +7008,7 @@ static-hero-s4
 }
 
 /*======================================
- 7. Home-style-4 
+ 7. Home-style-4
  =======================================*/
 /*--------------------------------------------------------------
 7.1 wpo-portfolio-section-s3
@@ -7170,7 +7162,7 @@ static-hero-s4
 }
 
 /*--------------------------------------------------------------
-8.4 wpo-offer-banner-section 
+8.4 wpo-offer-banner-section
 --------------------------------------------------------------*/
 .wpo-offer-banner-section {
   background: url(../images/offer.jpg) no-repeat center center;
