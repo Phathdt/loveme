@@ -6808,9 +6808,6 @@ static-hero-s4
   }
 }
 .wpo-portfolio-section-s2 .portfolio-grids .grid img,
-.wpo-portfolio-section-s4 .portfolio-grids .grid img {
-  max-height: 460px;
-}
 .wpo-portfolio-section-s2 .portfolio-grids .grid:first-child,
 .wpo-portfolio-section-s4 .portfolio-grids .grid:first-child {
   width: 50%;
