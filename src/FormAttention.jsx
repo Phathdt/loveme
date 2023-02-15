@@ -51,12 +51,12 @@ export default function FormAttention() {
                 />
               </div>
               <div>
+                <span className="px-2">Bạn sẽ tham dự chứ?</span>
                 <select
                   name="service"
                   className="form-control"
                   {...register('attend_type', { required: true })}
                 >
-                  <option disabled="disabled">Bạn sẽ tham dự chứ?</option>
                   <option>Có</option>
                   <option>Tất nhiên rồi</option>
                 </select>
