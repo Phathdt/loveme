@@ -1,4 +1,5 @@
 import { ToastContainer } from 'react-toastify'
+import Cards from './Cards'
 import FormAttention from './FormAttention'
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
       />
 
       <FormAttention />
+
+      <Cards />
     </div>
   )
 }

@@ -11,8 +11,8 @@ ReactDOM.createRoot(document.getElementById('form-attend')).render(
   </React.StrictMode>
 )
 
-ReactDOM.createRoot(document.getElementById('countdown')).render(
-  <React.StrictMode>
-    <Countdown />
-  </React.StrictMode>
-)
+// ReactDOM.createRoot(document.getElementById('countdown')).render(
+//   <React.StrictMode>
+//     <Countdown />
+//   </React.StrictMode>
+// )
