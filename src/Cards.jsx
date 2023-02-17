@@ -42,7 +42,14 @@ export default function Cards() {
         <div className="row row-cols-1 row-cols-md-3 g-4">
           <div className="col" />
           <div className="col">
-            <div className="card h-100">
+            <div
+              className="card h-100"
+              style={{
+                padding: 10,
+                'box-shadow': '0px 2px 16.8px 3.2px rgb(0 0 0 / 8%)',
+                background: 'aliceblue',
+              }}
+            >
               <div
                 className="card-body"
                 style={{ border: '10px solid #cde0ef' }}
