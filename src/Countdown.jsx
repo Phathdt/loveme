@@ -16,25 +16,25 @@ function Countdown() {
                   <div class="box">
                     <div>
                       <div class="time">{days}</div>
-                      <span>Days</span>
+                      <span>Ngày</span>
                     </div>
                   </div>
                   <div class="box">
                     <div>
                       <div class="time">{hours}</div>
-                      <span>Hours</span>
+                      <span>Giờ</span>
                     </div>
                   </div>
                   <div class="box">
                     <div>
                       <div class="time">{minutes}</div>
-                      <span>Mins</span>
+                      <span>Phút</span>
                     </div>
                   </div>
                   <div class="box">
                     <div>
                       <div class="time">{seconds}</div>
-                      <span>Secs</span>
+                      <span>Giây</span>
                     </div>
                   </div>
                 </div>
